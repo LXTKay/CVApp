@@ -20,85 +20,69 @@ export default function GeneralInformation(){
     setEditMode(true);
   }
 
-  if(editMode){
-  return <div>
+
+  return(
+  <div>
     <h2>General Information</h2>
     <div id="infoSection" onClick={enableEditMode}>
       <div>
         <p className="key">Name:</p>
-        <InputBox
+        {!editMode
+        ? <p className="value">{nameValue}</p>
+        : <InputBox
           type="text"
           value={nameValue}
           changeFunction={setNameValue}
-        />
+        />}
       </div>
       <div>
         <p className="key">Street: </p>
-        <InputBox
+        {!editMode
+        ? <p className="value">{streetValue}</p>
+        : <InputBox
           type="text"
           value={streetValue}
           changeFunction={setStreetValue}
-        />
-      </div>
-      <div>
-      <p className="key">Postal Code:</p>
-      <InputBox
-          type="number"
-          value={postalCodeValue}
-          changeFunction={setPostalCodeValue}
-        />
-      </div>
-      <div>
-      <p className="key">Town:</p>
-      <InputBox
-          type="text"
-          value={townValue}
-          changeFunction={setTownValue}
-        />
-      </div>
-      <div>
-      <p className="key">Phone Number:</p>
-      <InputBox
-          type="number"
-          value={phoneNumberValue}
-          changeFunction={setPhoneNumberValue}
-        />
-      </div>
-    </div>
-    <button onClick={
-      (e)=>{setEditMode(false)}
-    }>Save Changes</button>
-  </div>
-
-  } else{
-    return <div>
-    <h2>General Information</h2>
-    <div id="infoSection" onClick={enableEditMode}>
-      <div>
-        <p className="key">Name:</p>
-        <p className="value">{nameValue}</p>
-      </div>
-      <div>
-        <p className="key">Street: </p>
-        <p className="value">{streetValue}</p>
+        />}
+        
       </div>
       <div>
         <p className="key">Postal Code:</p>
-        <p className="value">{postalCodeValue}</p>
+        {!editMode
+        ? <p className="value">{postalCodeValue}</p>
+        : <InputBox
+          type="number"
+          value={postalCodeValue}
+          changeFunction={setPostalCodeValue}
+        />}
+        
       </div>
       <div>
         <p className="key">Town:</p>
-        <p className="value">{townValue}</p>
+        {!editMode
+        ? <p className="value">{townValue}</p>
+        : <InputBox
+          type="text"
+          value={townValue}
+          changeFunction={setTownValue}
+        />}
       </div>
       <div>
         <p className="key">Phone Number:</p>
-        <p className="value">{phoneNumberValue}</p>
+        {!editMode
+        ? <p className="value">{phoneNumberValue}</p>
+        : <InputBox
+          type="number"
+          value={phoneNumberValue}
+          changeFunction={setPhoneNumberValue}
+        />}
       </div>
     </div>
+    {editMode ? <button onClick={
+      (e)=>{setEditMode(false)}
+    }>Save Changes</button>
+    : null}
   </div>
-  }
+  )
   
 }
-
-//Todo: Save Changes Button
-//testen on changeFunction funktioniert

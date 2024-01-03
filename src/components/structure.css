@@ -1,9 +1,22 @@
 .key{
   display: inline-block;
   min-width: 10rem;
-  margin: 0;
 }
 
 .value{
   display: inline;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: 20rem max-content auto;
+  margin: 1rem 0;
+}
+
+p{
+  margin: 0;
+}
+
+.educationalButton{
+  margin: 1rem;
 }

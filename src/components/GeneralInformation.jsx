@@ -1,12 +1,6 @@
 import { useState } from "react";
 import "./structure.css";
-
-function InputBox({type, value, changeFunction}){
-  return <input
-  type={type}
-  defaultValue={value}
-  onChange={(e)=>{changeFunction(e.target.value)}}/>
-}
+import InputBox from "./InputBox";
 
 export default function GeneralInformation(){
   const [nameValue, setNameValue] = useState("Peter Lustig");

@@ -1,0 +1,11 @@
+.sheet{
+  background-color: white;
+  min-width: 1240px;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+h1{
+  align-self: center;
+}

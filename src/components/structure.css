@@ -1,6 +1,6 @@
 .key{
   display: inline-block;
-  min-width: 10rem;
+  min-width: 20rem;
 }
 
 .value{
@@ -19,4 +19,26 @@ p{
 
 .educationalButton{
   margin: 1rem;
+}
+
+.schoolButton{
+  display: none;
+}
+
+.schoolButtoHover{
+  display: block;
+}
+
+.description{
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+textarea{
+  width: 100%;
+}
+
+.descriptionText{
+  max-width: 50rem;
+  overflow-wrap: break-word;
 }

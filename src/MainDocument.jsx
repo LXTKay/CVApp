@@ -7,9 +7,9 @@ export default function MainDocument(){
   return (
   <div className="sheet">
     <h1>Curriculum Vitae</h1>
-      <GeneralInformation />
-      <EducationalExperience />
-      <PracticalExperience />
+    <GeneralInformation />
+    <EducationalExperience />
+    <PracticalExperience />
   </div>
   )
 }

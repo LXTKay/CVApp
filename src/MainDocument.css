@@ -1,6 +1,6 @@
 .sheet{
   background-color: white;
-  min-width: 1240px;
+  min-width: 1000px;
   display: flex;
   flex-direction: column;
   padding: 2rem;
